@@ -4,9 +4,8 @@ import Header from "../heading/Header";
 import Nav from "../nav/Nav";
 import About from "../about/About";
 import Contact from "../contact/Contact";
-import Customer from "../customer/Customer";
+import CustomersList from "../customer/CustomersList";
 import AddCustomer from "../customer/AddCustomer";
-import Hooking from "../hooking/Hooking";
 import Home from "../home/Home";
 import Footer from "../footer/Footer";
 import './App.css';
@@ -24,7 +23,7 @@ function App() {
           <Route path="/" exact component={Home}/>
           <Route path="/about" component={About}/>
           <Route path="/contact" component={Contact}/>
-          <Route path="/customers" exact component={Customer}/>
+          <Route path="/customers" exact component={CustomersList}/>
           <Route path="/customers/new" exact component={AddCustomer}/>
           <Route path="/customers/:id" component={CustomerDetails}/>
         </Switch>
