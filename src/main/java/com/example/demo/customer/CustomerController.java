@@ -7,7 +7,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "api/v1/customers")
-@CrossOrigin("*")
+@CrossOrigin(origins = "http://localhost:3000")
 public class CustomerController {
 
     private final CustomerService customerService;
@@ -27,9 +27,10 @@ public class CustomerController {
         return this.customerService.getCustomerById(id);
     }
 
-    @PostMapping
-    public void addCustomer(@RequestBody Customer customer){
-        this.customerService.addCustomer(customer);
+
+    @PostMapping(path="new")
+    public void addCustomer(@RequestBody CustomerDTO customer){
+        this.customerService.addCustomer(new Customer(customer.getName(), customer.getEmail(), customer.getDob()));
     }
 
     @DeleteMapping(path = "delete/{customerId}")

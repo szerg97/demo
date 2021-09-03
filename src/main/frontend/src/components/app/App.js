@@ -5,6 +5,7 @@ import Nav from "../nav/Nav";
 import About from "../about/About";
 import Contact from "../contact/Contact";
 import Customer from "../customer/Customer";
+import AddCustomer from "../customer/AddCustomer";
 import Hooking from "../hooking/Hooking";
 import Home from "../home/Home";
 import Footer from "../footer/Footer";
@@ -24,6 +25,7 @@ function App() {
           <Route path="/about" component={About}/>
           <Route path="/contact" component={Contact}/>
           <Route path="/customers" exact component={Customer}/>
+          <Route path="/customers/new" exact component={AddCustomer}/>
           <Route path="/customers/:id" component={CustomerDetails}/>
         </Switch>
         <Footer />

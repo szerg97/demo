@@ -38,6 +38,7 @@ function Customer() {
 
   return (
     <div className="Customer">
+      <Link to={"customers/new"}><h3>Add new</h3></Link>
       <Customers />
     </div>
   );

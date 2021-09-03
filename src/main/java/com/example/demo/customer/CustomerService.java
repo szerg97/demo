@@ -29,7 +29,7 @@ public class CustomerService {
         if(studentByEmail.isPresent()){
             throw new IllegalStateException("Email Taken!");
         }
-        this.customerRepository.save(customer);
+        this.customerRepository.saveAndFlush(customer);
     }
 
     public void deleteCustomer(Long id) {
